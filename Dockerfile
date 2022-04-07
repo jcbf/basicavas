@@ -15,5 +15,5 @@ RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-RUN sa-update -D
+RUN sa-update -D || true
 ENV DEBIAN_FRONTEND=dialog
