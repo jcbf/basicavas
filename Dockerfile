@@ -8,7 +8,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
     && apt-get -y upgrade \
     && apt-get -y install --no-install-recommends \
-    locales build-essential clamav spamassassin vim git
+    locales build-essential clamav spamassassin vim git \
+    geoip-database
 
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8 \
     && apt-get autoremove -y \
