@@ -13,10 +13,9 @@ on:
 env:  
   REGISTRY: docker.io
   IMAGE_NAME: ${{ github.repository }}
-runs-on: [self-hosted]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
     permissions:
       contents: read
       packages: write
